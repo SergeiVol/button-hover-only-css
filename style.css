@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #111;
+}
+
+.btn-1 {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin: 15px 10px;
+  background: #222;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #00fe73;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.btn-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #00fe73;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.btn-1:hover::before,
+.btn-1:hover::after {
+  width: 50%;
+  transition-delay: 0s;
+}
+
+.btn-1 span {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.btn-1 span:nth-child(1) {
+  transition-delay: 0.75s;
+}
+
+.btn-1:hover span:nth-child(1) {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+.btn-1 span:nth-child(2) {
+  transform: scale(3);
+  opacity: 0;
+  color: #111;
+  transition-delay: 0s;
+}
+
+.btn-1:hover span:nth-child(2) {
+  transform: scale(1);
+  transition-delay: 0s;
+  opacity: 1;
+  z-index: 10;
+  transition-delay: 0.5s;
+}
+
+.btn-2 {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  border: 3px solid #4a90e2;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-2 span {
+  font-size: 18px;
+  z-index: 100;
+}
+
+.btn-2::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #4a90e2;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-2:hover {
+  color: white;
+  box-shadow: none;
+}
+
+.btn-2:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #4a90e2;
+  top: 0;
+  left: 0%;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-3 {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  border: 3px solid #e2d14a;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-3 span {
+  font-size: 18px;
+  z-index: 100;
+}
+
+.btn-3::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #e2d14a;
+  top: 0;
+  left: auto;
+  right: 0;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+
+.btn-3:hover {
+  color: white;
+  box-shadow: none;
+}
+.btn-3:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #e2d14a;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.btn-4 {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  border: 3px solid #b52323;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-4 span {
+  font-size: 18px;
+  z-index: 10;
+}
+
+.btn-4::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: #b52323;
+  transition: all 0ms ease;
+}
+
+.btn-4::after {
+  content: "";
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: #b52323;
+  transition: all 0ms ease;
+}
+
+.btn-4:hover {
+  color: white;
+  box-shadow: none;
+}
+.btn-4:hover::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: #b52323;
+  transition: all 300ms ease;
+}
+
+.btn-4:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: all 300ms ease;
+  transition-delay: 350ms;
+}
+
+.btn-5 {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background: #222;
+  border: 3px solid #b5239e;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.btn-5 span {
+  font-size: 18px;
+  z-index: 10;
+}
+
+.btn-5:before {
+  content: "";
+  height: 0;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b5239e;
+  transition: all 0ms ease;
+}
+
+.btn-5:after {
+  content: "";
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b5239e;
+  transition: all 0ms ease;
+  z-index: 1;
+}
+
+.btn-5:hover {
+  color: white;
+  box-shadow: none;
+}
+.btn-5:hover:before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b5239e;
+  transition: all 300ms ease;
+}
+
+.btn-5:hover:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 300ms ease;
+  transition-delay: 350ms;
+}
+
+.btn-30 {
+  color: #fff;
+  width: 160px;
+  height: 50px;
+  position: relative;
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.btn-30 span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #222;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+.btn-30:before,
+.btn-30:after {
+  content: "";
+  position: absolute;
+  background: #fe1a6f;
+}
+.btn-30:focus:before,
+.btn-30:hover:before {
+  animation: beforeBorders 0.5s forwards ease-in-out;
+}
+.btn-30:focus:after,
+.btn-30:hover:after {
+  animation: afterBorders 0.5s forwards ease-in-out;
+}
+.btn-30:focus,
+.btn-30:hover {
+  animation: borderColors 0.5s steps(1) forwards;
+  outline: none;
+}
+.btn-30:focus span,
+.btn-30:hover span {
+  animation: background calc(0.5s / 5 * 3) forwards ease-in-out;
+  animation-delay: calc(0.5s / 5 * 2);
+}
+@keyframes beforeBorders {
+  0% {
+    top: calc(2px * -1);
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    width: 0;
+    height: 2px;
+  }
+  33% {
+    top: calc(2px * -1);
+    left: calc(2px * -1);
+    bottom: auto;
+    right: auto;
+    width: calc(2px + 50%);
+    height: 2px;
+  }
+  66% {
+    top: calc(2px * -1);
+    left: calc(2px * -1);
+    bottom: auto;
+    right: auto;
+    width: 2px;
+    height: calc((2px * 2) + 100%);
+  }
+  100% {
+    top: auto;
+    left: calc(2px * -1);
+    bottom: calc(2px * -1);
+    right: auto;
+    width: calc(2px + 50%);
+    height: calc((2px * 2) + 100%);
+  }
+}
+@keyframes afterBorders {
+  0% {
+    top: calc(2px * -1);
+    left: auto;
+    bottom: auto;
+    right: 50%;
+    width: 0;
+    height: 2px;
+  }
+  33% {
+    top: calc(2px * -1);
+    left: auto;
+    bottom: auto;
+    right: calc(2px * -1);
+    width: calc(2px + 50%);
+    height: 2px;
+  }
+  66% {
+    top: calc(2px * -1);
+    left: auto;
+    bottom: auto;
+    right: calc(2px * -1);
+    width: 2px;
+    height: calc((2px * 2) + 100%);
+  }
+  100% {
+    top: auto;
+    left: auto;
+    bottom: calc(2px * -1);
+    right: calc(2px * -1);
+    width: calc(2px + 50%);
+    height: calc((2px * 2) + 100%);
+  }
+}
+@keyframes borderColors {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  33% {
+    border-top-color: #fe1a6f;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  66% {
+    border-top-color: #fe1a6f;
+    border-right-color: #fe1a6f;
+    border-bottom-color: transparent;
+    border-left-color: #fe1a6f;
+  }
+  100% {
+    border-top-color: #fe1a6f;
+    border-right-color: #fe1a6f;
+    border-bottom-color: #fe1a6f;
+    border-left-color: #fe1a6f;
+  }
+}
+@keyframes background {
+  to {
+    background: #555;
+    text-shadow: 0 0.1em 0.1em #111;
+  }
+}
